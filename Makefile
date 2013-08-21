@@ -16,21 +16,6 @@ all:
 
 install:
 	@mkdir -p $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds/
-	@/bin/cp -f gimp/scripts/gimp-normalize-to-bootsplash.scm tmp-gimp-command
-	@cat gimp/scripts/gimp-convert-to-jpeg.scm >> tmp-gimp-command
-	@for i in */gfxboot/*.png ; do \
-	    echo \(gimp-normalize-to-bootsplash 1.0 \"$$i\" \"`dirname $$i`/`basename $$i .png`.jpg\"\) >> tmp-gimp-command; \
-	done
-	@for i in */background/*.png ; do \
-            echo \(gimp-convert-to-jpeg 0.98 \"$$i\" \"$(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds/`basename $$i .png`.jpg\"\) >> tmp-gimp-command; \
-	done
-	@echo \(gimp-quit 1\) >> tmp-gimp-command
-	@echo running gimp to convert images
-	@cat tmp-gimp-command | gimp  --console-messages -i  -d  -b -
-	@rm -f tmp-gimp-command
-#	GIMP2_DIRECTORY=`pwd`/gimp gimp  --console-messages -i -d  -b '(begin (gimp-normalize-to-bootsplash-dirs "1.0" "*" "bootsplash/data/*.png") (gimp-quit 1))'
-#	GIMP2_DIRECTORY=`pwd`/gimp gimp --console-messages -i -d -b '(begin (gimp-normalize-to-bootsplash-dirs "1.0" "*" "gfxboot/*.png") (gimp-quit 1))'
-
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/screensaver
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/backgrounds
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/icons
