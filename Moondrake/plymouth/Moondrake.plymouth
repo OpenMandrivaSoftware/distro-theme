@@ -1,0 +1,8 @@
+[Plymouth Theme]
+Name=Moondrake theme
+Description=Moondrake theme
+ModuleName=script
+
+[script]
+ImageDir=/usr/share/plymouth/themes/Moondrake
+ScriptFile=/usr/share/plymouth/themes/Moondrake/mdv.script

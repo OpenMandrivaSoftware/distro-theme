@@ -1,0 +1,13 @@
+pixmap_path "/tmp/"
+
+style "b"{
+  bg_pixmap[NORMAL] = "bootsplash.png"
+}class "GtkWindow" style "b"
+
+style "a"{
+  bg[NORMAL] = "#aaaaaa"
+}class "GtkFrame" style "a"
+
+style "a"{
+  bg[NORMAL] = "#aaaaaa"
+}class "GtkEventBox" style "a"
