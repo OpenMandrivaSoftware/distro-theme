@@ -1,10 +1,22 @@
+2013-08-21 20:59:07 +0200 tpg 
+
+	* move theme from grub2 package (HEAD, origin/master, origin/HEAD, master)
+
+2013-08-21 19:52:22 +0200 tpg 
+
+	* fix ChangeLog generation
+
+2013-08-21 19:51:37 +0200 tpg 
+
+	* generated changelog
+
 2013-08-21 19:51:01 +0200 tpg 
 
-	* generated changelog (HEAD, master)
+	* generated changelog
 
 2013-08-21 19:08:23 +0200 tpg 
 
-	* fix compress with xz (origin/master, origin/HEAD)
+	* fix compress with xz
 
 2013-08-21 19:02:55 +0200 tpg 
 
