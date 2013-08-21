@@ -73,11 +73,11 @@ dir:
 	mkdir $(NAME)-$(VERSION)
 
 tar:
-	tar cvf $(NAME).tar $(NAME)-$(VERSION)
+	tar cvfa $(NAME).tar.xz $(NAME)-$(VERSION)
 	rm -rf $(NAME)-$(VERSION)
 
 localcopy: dir
-	tar c --exclude=.svn $(FILES) | tar x -C $(NAME)-$(VERSION)
+	tar c --exclude=.svn $(FILES) | tar xf -C $(NAME)-$(VERSION)
 
 
 clean:
