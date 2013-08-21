@@ -1,6 +1,6 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.17
+VERSION=1.4.18
 
 THEMES=Moondrake OpenMandriva
 
