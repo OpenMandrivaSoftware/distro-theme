@@ -1,10 +1,18 @@
+2013-08-22 18:19:30 +0200 tpg 
+
+	*  remove motif from OpenMandriva plymout animation script  generate suspend.png image in a same way like backgound but with gray scale (HEAD, origin/master, origin/HEAD, master)
+
+2013-08-22 13:30:01 +0200 tpg 
+
+	* generated changelog
+
 2013-08-22 13:29:27 +0200 tpg 
 
-	* 1.4.19 (HEAD, master)
+	* 1.4.19
 
 2013-08-22 13:27:45 +0200 tpg 
 
-	* generated changelog (origin/master, origin/HEAD)
+	* generated changelog
 
 2013-08-22 13:27:33 +0200 tpg 
 
