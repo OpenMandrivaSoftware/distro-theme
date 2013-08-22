@@ -1,10 +1,30 @@
+2013-08-22 13:27:33 +0200 tpg 
+
+	* OpenMandriva/icons/omv-button.svg -> OpenMandriva/icons/openmandriva.svg (HEAD, origin/master, origin/HEAD, master)
+
+2013-08-22 13:26:37 +0200 tpg 
+
+	* - remove background.png files and generate them from Makefile
+
+2013-08-22 12:01:38 +0200 tpg 
+
+	* add distribution icons for grub2 theme
+
+2013-08-22 11:41:36 +0200 tpg 
+
+	* background.png is convert from OpenMandriva-1920x1080.jpg
+
+2013-08-21 21:22:41 +0200 tpg 
+
+	* generated changelog
+
 2013-08-21 21:22:14 +0200 tpg 
 
-	*  do not run gimp normalize scripts and other - few years ago it was really needed (HEAD, master)
+	*  do not run gimp normalize scripts and other - few years ago it was really needed
 
 2013-08-21 21:10:43 +0200 tpg 
 
-	* fix makefile (origin/master, origin/HEAD)
+	* fix makefile
 
 2013-08-21 21:07:03 +0200 tpg 
 
