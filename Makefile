@@ -1,8 +1,9 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.18
-DEFAULT_RES=1920x1080
-FALLBACK_RES=1024x768
+VERSION=1.4.19
+# set default resoltuion for background here
+DEFAULT_RES:=1920x1080
+FALLBACK_RES:=1024x768
 
 THEMES=Moondrake OpenMandriva
 
