@@ -1,6 +1,14 @@
+2013-08-22 18:41:28 +0200 tpg 
+
+	* resize openmandriva.png grub icon to 32x32 (HEAD, master)
+
+2013-08-22 18:20:26 +0200 tpg 
+
+	* generated changelog (origin/master, origin/HEAD)
+
 2013-08-22 18:19:30 +0200 tpg 
 
-	*  remove motif from OpenMandriva plymout animation script  generate suspend.png image in a same way like backgound but with gray scale (HEAD, origin/master, origin/HEAD, master)
+	*  remove motif from OpenMandriva plymout animation script  generate suspend.png image in a same way like backgound but with gray scale
 
 2013-08-22 13:30:01 +0200 tpg 
 
