@@ -1,6 +1,8 @@
 NAME=distro-theme
 PACKAGE=distro-theme
 VERSION=1.4.18
+DEFAULT_RES=1920x1080
+FALLBACK_RES=1024x768
 
 THEMES=Moondrake OpenMandriva
 
@@ -15,7 +17,7 @@ SVNNAME=svn+ssh://svn.mandriva.com/svn/packages/cooker/mandriva-theme/current/
 all:
 
 install:
-	@mkdir -p $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds/
+	mkdir -p $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds/
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/screensaver
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/backgrounds
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/icons
@@ -31,9 +33,27 @@ install:
 	  install -m644 common/plymouth/*.png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -m644 $$t/plymouth/*.plymouth $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -m644 $$t/plymouth/*.png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
-	  install -d $(DESTDIR)/boot/grub2/themes/$$t;  \
+	  install -d $(DESTDIR)/boot/grub2/themes/$$t; \
+	  install -d $(DESTDIR)/boot/grub2/themes/$$t/icons; \
 	  install -m644 $$t/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/; \
-        done
+	  if [ -d $$t/icons/gfxboot/ ]; then \
+	  install -m644 $$t/icons/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/icons; \
+	  fi; \
+	  if [ -e $$t/background/$$t-$(DEFAULT_RES).png ]; then \
+		install -m644 $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)/boot/grub2/themes/$$t/background.png; \
+		install -m644 $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	  elif [ -e $$t/background/$$t-$(FALLBACK_RES).png ]; then \
+		install -m644 $$t/background/$$t-$(FALLBACK_RES).png $(DESTDIR)/boot/grub2/themes/$$t/background.png; \
+		install -m644 $$t/background/$$t-$(FALLBACK_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	  fi; \
+	  if [ -e $$t/background/$$t-$(DEFAULT_RES).jpg ]; then \
+		convert $$t/background/$$t-$(DEFAULT_RES).jpg $(DESTDIR)/boot/grub2/themes/$$t/background.png \
+		&& convert $$t/background/$$t-$(DEFAULT_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	  elif [ -e $$t/background/$$t-$(FALLBACK_RES).jpg ]; then \
+		convert $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)/boot/grub2/themes/$$t/background.png \
+		&& convert $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	  fi; \
+	done
 
 log: ChangeLog
 
