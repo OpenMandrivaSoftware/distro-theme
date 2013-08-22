@@ -53,19 +53,6 @@ else {
   anim.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.82);
   anim.angle = 0;
   anim.index = 0;
-
-  motif.original_image = ImageNew("motif.png");
-  motif.image = motif.original_image.Scale(motif.original_image.GetWidth() * Window.GetMaxWidth() / background.original_image.GetWidth(), motif.original_image.GetHeight() * Window.GetMaxHeight() / background.original_image.GetHeight());
-  motif.sprite = SpriteNew();
-  motif.sprite.SetImage(motif.image);
-  motif.sprite.SetOpacity(0);
-  motif.sprite.SetY((Window.GetMaxHeight() - motif.image.GetHeight()) / 2);
-  if (Plymouth.GetMode() == "shutdown") {
-    motif.opacity = 1;
-  }
-  else {
-    motif.opacity = 0;
-  }
 }
 
 ratio =  logo.original_image.GetWidth() / logo.original_image.GetHeight();
@@ -92,12 +79,10 @@ fun refresh_callback ()
 	anim.index %= anim.imagecount;
 	anim.sprite.SetImage(RotatedImage (anim.index));
         #anim.sprite.SetOpacity (1);
-	motif.sprite.SetOpacity(motif.opacity);
       }
     else
       {
         anim.sprite.SetOpacity(0);
-	motif.sprite.SetOpacity(0);
       }
 
   }
@@ -179,13 +164,12 @@ fun display_password_callback (prompt, bullets)
 	dialog_setup();
     else 
 	dialog_opacity(1);
-    motif.sprite.SetOpacity(0);
     anim.sprite.SetOpacity(0);
-	
+
     dialog.prompt_sprite.SetImage(Image.Text(prompt, 1.0, 1.0, 1.0));
     for (index = 0; dialog.bullet[index] || index < bullets; index++)
-      { 
-	
+      {
+
         if (!dialog.bullet[index])
           {
             dialog.bullet[index].sprite = SpriteNew();
@@ -253,12 +237,6 @@ if (Plymouth.GetMode() == "suspend" || Plymouth.GetMode() == "resume") {
       }
   }
 
-  if (Plymouth.GetMode() == "shutdown") {
-   motif.opacity = 1 - progress;
-  }
-  else {
-   motif.opacity = progress;
-  }
  }
 
 Plymouth.SetBootProgressFunction(progress_callback);
@@ -268,9 +246,6 @@ Plymouth.SetBootProgressFunction(progress_callback);
 fun quit_callback ()
 {
  anim.sprite.SetOpacity (0);
-  if (Plymouth.GetMode() == "shutdown") {
-   motif.sprite.SetOpacity(0);
-  }
 }
 
 Plymouth.SetQuitFunction(quit_callback);
