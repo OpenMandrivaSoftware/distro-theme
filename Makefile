@@ -1,6 +1,6 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.19
+VERSION=1.4.20
 # set default resoltuion for background here
 DEFAULT_RES:=1920x1080
 FALLBACK_RES:=1024x768
@@ -25,7 +25,7 @@ install:
 	install -m 644 common/screensaver/*.png $(DESTDIR)$(prefix)$(sharedir)/mdk/screensaver
 	install -m 644 extra-backgrounds/*.jpg $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m 644 extra-backgrounds/*.xml $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
-	install -m644 */background/*.jpg $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
+	install -m644 */background/*.png $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */icons/*.*g $(DESTDIR)$(prefix)$(sharedir)/icons
 	@for t in $(THEMES); do \
           set -x; set -e; \
