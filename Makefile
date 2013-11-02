@@ -11,7 +11,7 @@ FILES=$(THEMES) Makefile common gimp extra-backgrounds
 sharedir=/usr/share
 configdir=/etc
 
-# https://abf.rosalinux.ru/moondrake/mandriva-theme
+# https://abf.rosalinux.ru/omv_software/distro-theme
 SVNSOFT=svn+ssh://svn.mandriva.com/svn/soft/theme/mandriva-theme/
 SVNNAME=svn+ssh://svn.mandriva.com/svn/packages/cooker/mandriva-theme/current/
 
@@ -41,22 +41,46 @@ install:
 	  install -m644 $$t/icons/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/icons; \
 	  fi; \
 	  if [ -e $$t/background/$$t-$(DEFAULT_RES).png ]; then \
+	    if [ -e $$t/gfxboot/background.png ]; then \
 		install -m644 $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)/boot/grub2/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/background.png ]; then \
 		install -m644 $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/suspend.png ]; then \
 		convert -colorspace Gray $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/suspend.png; \
+	    fi \
 	  elif [ -e $$t/background/$$t-$(FALLBACK_RES).png ]; then \
+	    if [ -e $$t/gfxboot/background.png ]; then \
 		install -m644 $$t/background/$$t-$(FALLBACK_RES).png $(DESTDIR)/boot/grub2/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/background.png ]; then \
 		install -m644 $$t/background/$$t-$(FALLBACK_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/suspend.png ]; then \
 		convert -colorspace Gray $$t/background/$$t-$(FALLBACK_RES).png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/suspend.png; \
+	    fi \
 	  fi; \
 	  if [ -e $$t/background/$$t-$(DEFAULT_RES).jpg ]; then \
+	    if [ -e $$t/gfxboot/background.jpg ]; then \
 		convert $$t/background/$$t-$(DEFAULT_RES).jpg $(DESTDIR)/boot/grub2/themes/$$t/background.png \
+	    fi \
+	    if [ -e $$t/plymouth/background.png ]; then \
 		&& convert $$t/background/$$t-$(DEFAULT_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/suspend.png ]; then \
 		convert -colorspace Gray $$t/background/$$t-$(DEFAULT_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/suspend.png; \
+	    fi
 	  elif [ -e $$t/background/$$t-$(FALLBACK_RES).jpg ]; then \
+	    if [ -e $$t/gfxboot/background.jpg ]; then \
 		convert $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)/boot/grub2/themes/$$t/background.png \
+	    fi \
+	    if [ -e $$t/plymouth/background.png ]; then \
 		&& convert $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
+	    fi \
+	    if [ -e $$t/plymouth/suspend.png ]; then \
 		convert -colorspace Gray $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/suspend.png; \
+	    fi \
 	  fi; \
 	done
 
