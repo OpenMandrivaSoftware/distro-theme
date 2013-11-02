@@ -5,4 +5,4 @@ ModuleName=script
 
 [script]
 ImageDir=/usr/share/plymouth/themes/OpenMandriva
-ScriptFile=/usr/share/plymouth/themes/OpenMandriva/mdv.script
+ScriptFile=/usr/share/plymouth/themes/OpenMandriva/omv.script
