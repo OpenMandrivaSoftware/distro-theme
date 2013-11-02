@@ -1,6 +1,18 @@
+2013-11-02 20:04:16 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add new artwork from rugyada <rugyada@gmail.com> rename mdv.script to omv.script (HEAD, master)
+
+2013-10-01 18:36:42 +0200 cristina 
+
+	* Added background.png and motif.png, replaced openmandriva-logo.png (origin/master, origin/HEAD)
+
+2013-09-12 17:34:27 +0200 tpg 
+
+	* generated changelog
+
 2013-09-12 17:30:10 +0200 tpg 
 
-	* install png files - version bump (HEAD, origin/master, origin/HEAD, master)
+	* install png files - version bump
 
 2013-09-12 17:24:59 +0200 tpg 
 
