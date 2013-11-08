@@ -1,6 +1,6 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.21
+VERSION=1.4.22
 # set default resoltuion for background here
 DEFAULT_RES:=1920x1080
 FALLBACK_RES:=1024x768
