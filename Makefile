@@ -22,7 +22,7 @@ install:
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/screensaver
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/backgrounds
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/icons
-	install -m 644 common/screensaver/*.png $(DESTDIR)$(prefix)$(sharedir)/mdk/screensaver
+	install -m 644 common/screensaver/*.jpg $(DESTDIR)$(prefix)$(sharedir)/mdk/screensaver
 	install -m 644 extra-backgrounds/*.jpg $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m 644 extra-backgrounds/*.xml $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */background/*.png $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
