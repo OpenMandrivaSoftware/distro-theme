@@ -1,10 +1,18 @@
+2013-11-12 22:58:29 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* remove wrong file (HEAD, origin/master, origin/HEAD, master)
+
+2013-11-12 22:33:01 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* generated changelog
+
 2013-11-12 22:32:43 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* install all extra backgrounds (HEAD, master)
+	* install all extra backgrounds
 
 2013-11-12 22:04:08 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* generated changelog (origin/master, origin/HEAD)
+	* generated changelog
 
 2013-11-12 22:02:40 +0100 tpg (Tomasz Paweł Gajc) 
 
