@@ -1,10 +1,42 @@
+2013-11-12 22:02:40 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* rename files to new filename scheme (HEAD, origin/master, origin/HEAD, master)
+
+2013-11-12 21:35:18 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* rename winner backgrounds
+
+2013-11-12 19:30:13 +0100 Tomasz Paweł Gajc 
+
+	* add other wallpapers from "The Flavor of Freedom" wallpaper contest
+
+2013-11-12 18:58:33 +0100 Tomasz Paweł Gajc 
+
+	* add winner images from "The Flavor of Freedom" wallpaper contest
+
+2013-11-08 11:32:25 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* fix installation for new screensaver files
+
+2013-11-08 10:21:32 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add new screensaver images from rugyada move current TUX screensaver to Moondrake subfolder
+
+2013-11-08 10:01:38 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add light version for OpenMandriva wallpappers from rugyada
+
+2013-11-02 20:45:20 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* generated changelog
+
 2013-11-02 20:44:59 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* fix makefile for last changes (HEAD, master)
+	* fix makefile for last changes
 
 2013-11-02 20:20:37 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* remove motif.png from common files handle default backgrounds in Makefile (origin/master, origin/HEAD)
+	* remove motif.png from common files handle default backgrounds in Makefile
 
 2013-11-02 20:05:06 +0100 tpg (Tomasz Paweł Gajc) 
 
