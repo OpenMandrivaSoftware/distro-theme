@@ -24,7 +24,6 @@ install:
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/icons
 	install -m 644 common/screensaver/*.jpg $(DESTDIR)$(prefix)$(sharedir)/mdk/screensaver
 	install -m 644 extra-backgrounds/*.*g $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
-	install -m 644 extra-backgrounds/*.xml $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */background/*.*g $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */icons/*.*g $(DESTDIR)$(prefix)$(sharedir)/icons
 	@for t in $(THEMES); do \
