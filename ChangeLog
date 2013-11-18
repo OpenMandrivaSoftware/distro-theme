@@ -1,10 +1,42 @@
-2013-11-13 14:01:00 +0100 bero (Bernhard Rosenkränzer)
+2013-11-19 00:27:52 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* Converted Flavor of Freedom 07 from PNG to JPG
+	* SILENT add missing terminal-box: item_normal_*.png (HEAD, origin/master, origin/HEAD, master)
+
+2013-11-19 00:26:11 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* fix openmandriva.png file fix theme.txt (icons for well known systems should be visibe in grub)
+
+2013-11-18 15:43:10 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add missing files
+
+2013-11-18 13:56:52 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* do not install missing files
+
+2013-11-18 12:09:32 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* bump release
+
+2013-11-18 12:07:50 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* remove backgrounds with unclear origin and status from extra-backgrounds
+
+2013-11-18 10:33:34 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add new terminal_background.png from rugyada
+
+2013-11-13 14:01:57 +0100 Bernhard Rosenkränzer 
+
+	* Convert flavor_of_freedom-07.jpg to jpeg (used to be a png masquerading as jpg)
+
+2013-11-12 22:59:03 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* generated changelog
 
 2013-11-12 22:58:29 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* remove wrong file (HEAD, origin/master, origin/HEAD, master)
+	* remove wrong file
 
 2013-11-12 22:33:01 +0100 tpg (Tomasz Paweł Gajc) 
 
