@@ -7,6 +7,7 @@ message-color: "#000000"
 message-bg-color: "#f6f6f6"
 desktop-image: "background.png"
 terminal-font: "Droid Sans Mono Regular 11"
+terminal-box: "item_normal_*.png"
 
 # Show the boot menu
 + boot_menu {
