@@ -34,22 +34,20 @@ install:
 	  install -m644 $$t/plymouth/*.plymouth $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -m644 $$t/plymouth/*.png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -d $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t;  \
-	  convert $$t/gfxboot/back.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/back.jpg; \
-	  if [ -f $$t/gfxboot/welcome.png ]; then \
-		  convert $$t/gfxboot/welcome.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/welcome.jpg; \
-	  fi; \
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t; \
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t/icons; \
+	  if [ -f $$t/gfxboot/welcome.png ]; then \
+	    convert $$t/gfxboot/welcome.png $(DESTDIR)/boot/grub2/themes/$$t/welcome.jpg; \
+	    convert $$t/gfxboot/welcome.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/welcome.jpg; \
+	    rm $$t/gfxboot/welcome.png; \
+	  fi; \
+	  if [ -f $$t/gfxboot/back.png ]; then \
+	    convert $$t/gfxboot/back.png $(DESTDIR)/boot/grub2/themes/$$t/back.jpg; \
+	    convert $$t/gfxboot/back.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/back.jpg; \
+	    rm $$t/gfxboot/back.png; \
+	  fi; \
+	  install -m644 $$t/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/; \
 	  install -m644 $$t/gfxboot/theme.txt $(DESTDIR)/boot/grub2/themes/$$t/; \
-	  pushd $$t/gfxboot; \
-	    for i in *.png; do \
-	      if [ "$$i" == "back.png" -o "$$i" == "background.png" ]; then \
-	        continue; \
-	    fi; \
-	    install -m644 $$i $(DESTDIR)/boot/grub2/themes/$$t/$$i; \
-	  done; \
-	  convert back.png $(DESTDIR)/boot/grub2/themes/$$t/back.jpg; \
-	  popd; \
 	  if [ -d $$t/icons/gfxboot/ ]; then \
 	  install -m644 $$t/icons/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/icons; \
 	  fi; \
