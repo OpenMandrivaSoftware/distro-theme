@@ -1,6 +1,6 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.25
+VERSION=1.4.28
 # set default resoltuion for background here
 DEFAULT_RES:=1920x1080
 FALLBACK_RES:=1024x768
@@ -39,6 +39,7 @@ install:
 	  if [ -d $$t/icons/gfxboot/ ]; then \
 	  install -m644 $$t/icons/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/icons; \
 	  fi; \
+	  if [ ! $$t == "OpenMandriva" ]; then \
 	  if [ ! -e $$t/gfxboot/background.png ] &&  [ ! -e $$t/plymouth/background.png ] && [ ! -e $$t/plymouth/suspend.png ]; then \
 	    if [ -e $$t/background/$$t-$(DEFAULT_RES).png ]; then \
 		    install -m644 $$t/background/$$t-$(DEFAULT_RES).png $(DESTDIR)/boot/grub2/themes/$$t/background.png; \
@@ -58,6 +59,7 @@ install:
 		    && convert $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/background.png; \
 		    convert -colorspace Gray $$t/background/$$t-$(FALLBACK_RES).jpg $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/suspend.png; \
 	    fi; \
+	  fi; \
 	  fi; \
 	done
 
