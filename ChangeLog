@@ -1,6 +1,22 @@
+2014-02-09 22:53:53 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* sync with Moondrake, reorganize stuff (HEAD, origin/master, origin/HEAD, master)
+
+2014-02-09 22:29:12 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* better names for OMV backgrounds
+
+2014-02-09 22:10:26 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* bump release tag 1.4.25
+
+2014-02-09 22:09:45 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* generated changelog
+
 2014-02-09 22:07:12 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* add 2014.0 screensaver images from Artwork Team (HEAD, origin/master, origin/HEAD, master)
+	* add 2014.0 screensaver images from Artwork Team
 
 2014-02-09 22:02:19 +0100 tpg (Tomasz Paweł Gajc) 
 
