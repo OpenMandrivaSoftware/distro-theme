@@ -1,6 +1,26 @@
+2014-02-09 22:07:12 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add 2014.0 screensaver images from Artwork Team (HEAD, origin/master, origin/HEAD, master)
+
+2014-02-09 22:02:19 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add 2014.0 plymouth theme from Artwork Team
+
+2014-02-09 21:58:02 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add 2014.0 backgorunds from Artwork Team
+
+2014-02-09 14:04:34 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* add 2014.0 grub backgorun from Artwork Team
+
+2013-11-19 00:28:11 +0100 tpg (Tomasz Paweł Gajc) 
+
+	* generated changelog
+
 2013-11-19 00:27:52 +0100 tpg (Tomasz Paweł Gajc) 
 
-	* SILENT add missing terminal-box: item_normal_*.png (HEAD, origin/master, origin/HEAD, master)
+	* SILENT add missing terminal-box: item_normal_*.png
 
 2013-11-19 00:26:11 +0100 tpg (Tomasz Paweł Gajc) 
 
