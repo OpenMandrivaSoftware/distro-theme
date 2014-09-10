@@ -1,8 +1,8 @@
 [Plymouth Theme]
-Name=OpenMandriva theme
-Description=OpenMandriva theme
+Name=OpenMandriva 2014.1 theme
+Description=OpenMandriva 2014.1 Plymouth theme
 ModuleName=script
 
 [script]
 ImageDir=/usr/share/plymouth/themes/OpenMandriva
-ScriptFile=/usr/share/plymouth/themes/OpenMandriva/omv.script
+ScriptFile=/usr/share/plymouth/themes/OpenMandriva/OpenMandriva.script

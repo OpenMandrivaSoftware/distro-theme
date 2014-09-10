@@ -1,4 +1,4 @@
-# Mdv splashy like theme
+# om splashy like theme
 
 Window.GetMaxWidth = fun (){
   i = 0;
@@ -32,42 +32,44 @@ fun RotatedImage (index){
 	return RotatedImageCache[index];
 	}
 
+scrnratio = Window.GetWidth() / Window.GetHeight();
 
 if (Plymouth.GetMode() == "suspend" || Plymouth.GetMode() == "resume") {
   background.original_image = ImageNew("suspend.png");
-  Window.SetBackgroundTopColor(1, 0, 0);
-  Window.SetBackgroundBottomColor(0, 1, 0);
+  Window.SetBackgroundTopColor(0.102, 0.102, 0.102);
+  Window.SetBackgroundBottomColor(0.102, 0.102, 0.102);
 }
 else {
-  logo.original_image = ImageNew("openmandriva-logo.png");
-  background.original_image = ImageNew("background.png");
-  Window.SetBackgroundTopColor(0.234, 0.43, 0.705);
-  Window.SetBackgroundBottomColor(0.16, 0.25, 0.44);
+  if (scrnratio < 1.29 ) {
+       background.original_image = ImageNew("bg-background-54.png");
+       ruru.original_image = ImageNew("motivo-54.png");
+  } else {
+  if (scrnratio < 1.55 ) {
+       background.original_image = ImageNew("bg-background-43.png");
+       ruru.original_image = ImageNew("motivo-43.png");
+  } else {
+  if (scrnratio < 1.75 ) {
+       background.original_image = ImageNew("bg-background-1610.png");
+       ruru.original_image = ImageNew("motivo-1610.png");
+  } else {
+       background.original_image = ImageNew("bg-background-169.png");
+       ruru.original_image = ImageNew("motivo-169.png");
+  }}}
+  Window.SetBackgroundTopColor(0.102, 0.102, 0.102);
+  Window.SetBackgroundBottomColor(0.102, 0.102, 0.102);
 
-  anim.image= ImageNew("animation.png");
-  anim.original_image= anim.image.Scale(anim.target_width, anim.target_width);
-
-  anim.sprite = SpriteNew();
-  anim.sprite.SetImage(RotatedImage (0));
-  anim.sprite.SetX((Window.GetX() + Window.GetWidth() - RotatedImage(0).GetWidth()) / 2);
-  anim.sprite.SetY(Window.GetY() + Window.GetHeight() * 0.82);
-  anim.angle = 0;
-  anim.index = 0;
 }
-
-ratio =  logo.original_image.GetWidth() / logo.original_image.GetHeight();
-reduction = 0.4;
-logo.image = logo.original_image.Scale(reduction * Window.GetMaxWidth() , reduction / ratio *  Window.GetMaxWidth());
-logo.sprite = SpriteNew();
-logo.sprite.SetImage(logo.image);
-logo.opacity_angle = 0;
-logo.sprite.SetX((Window.GetX() + Window.GetMaxWidth()  - logo.image.GetWidth())  / 2);
-logo.sprite.SetY(Window.GetY() + Window.GetMaxHeight() / 4);
 
 background.image = background.original_image.Scale(Window.GetMaxWidth() , Window.GetMaxHeight());
 background.sprite = SpriteNew();
 background.sprite.SetImage(background.image);
 background.sprite.SetPosition(Window.GetX(), Window.GetY(), -10);
+
+ruru.image = ruru.original_image.Scale(Window.GetMaxWidth() , Window.GetMaxHeight());
+ruru.sprite = SpriteNew();
+ruru.sprite.SetImage(ruru.image);
+ruru.sprite.SetPosition(Window.GetX(), Window.GetY(), 0);
+ruru.sprite.SetOpacity (0);
 
 sprite_prompt = SpriteNew();
 
@@ -78,7 +80,6 @@ fun refresh_callback ()
 	anim.index += 1;
 	anim.index %= anim.imagecount;
 	anim.sprite.SetImage(RotatedImage (anim.index));
-        #anim.sprite.SetOpacity (1);
       }
     else
       {
@@ -109,21 +110,21 @@ fun dialog_setup()
     box.sprite = SpriteNew();
     box.sprite.SetImage(box.image);
     box.x = Window.GetX() + Window.GetWidth()  / 2 - box.image.GetWidth()/2;
-    box.y = Window.GetY() + Window.GetHeight() / 2 - box.image.GetHeight()/2;
+    box.y = Window.GetY() + Window.GetHeight() - box.image.GetHeight() - 20 ;
     box.z = 10000;
     box.sprite.SetPosition(box.x, box.y, box.z);
     
     lock.sprite = SpriteNew();
     lock.sprite.SetImage(lock.image);
     lock.x = box.x + box.image.GetWidth()/2 - (lock.image.GetWidth() + entry.image.GetWidth()) / 2;
-    lock.y = box.y + box.image.GetHeight()/2 - lock.image.GetHeight()/2;
+    lock.y = box.y + box.image.GetHeight() - lock.image.GetHeight() - 20 ;
     lock.z = box.z + 1;
     lock.sprite.SetPosition(lock.x, lock.y, lock.z);
     
     entry.sprite = SpriteNew();
     entry.sprite.SetImage(entry.image);
     entry.x = lock.x + lock.image.GetWidth();
-    entry.y = box.y + box.image.GetHeight()/2 - entry.image.GetHeight()/2;
+    entry.y = box.y + box.image.GetHeight() - entry.image.GetHeight() - 20;
     entry.z = box.z + 1;
     entry.sprite.SetPosition(entry.x, entry.y, entry.z);
 
@@ -164,12 +165,14 @@ fun display_password_callback (prompt, bullets)
 	dialog_setup();
     else 
 	dialog_opacity(1);
+    
     anim.sprite.SetOpacity(0);
-
-    dialog.prompt_sprite.SetImage(Image.Text(prompt, 1.0, 1.0, 1.0));
+	
+#   dialog.prompt_sprite.SetImage(Image.Text(prompt, 0.71764706, 0.90588235 , 0.58431373));
+   dialog.prompt_sprite.SetImage(Image.Text(prompt, 1, 1, 1));
     for (index = 0; dialog.bullet[index] || index < bullets; index++)
-      {
-
+      { 
+	
         if (!dialog.bullet[index])
           {
             dialog.bullet[index].sprite = SpriteNew();
@@ -189,9 +192,12 @@ fun display_password_callback (prompt, bullets)
 fun display_message_callback (prompt)
   {
   
-prompt = Image.Text(prompt,1.0, 1.0, 1.0);
+#prompt = Image.Text(prompt, 0.71764706, 0.90588235, 0.58431373);
+# Change the text to white for better readability
+prompt = Image.Text(prompt, 1, 1, 1);
 sprite_prompt.SetImage(prompt);
-sprite_prompt.SetPosition(Window.GetX() + (Window.GetWidth() - prompt.GetWidth()) / 2, Window.GetY() + Window.GetHeight() * 0.93, 2);
+#sprite_prompt.SetPosition(Window.GetX() + (Window.GetWidth() - prompt.GetWidth()) / 2, Window.GetY() + Window.GetHeight() * 0.93, 2);
+sprite_prompt.SetPosition(Window.GetX() + (Window.GetWidth() - prompt.GetWidth()) / 2, Window.GetY() + 20, 2);
   }
 
 /* instantiate dialog at startup, to ensure all icons are loaded in memory before initrd is unmounted, in case /usr isn't mounted yet */
@@ -236,7 +242,28 @@ if (Plymouth.GetMode() == "suspend" || Plymouth.GetMode() == "resume") {
         progress_bar.sprite.SetImage(progress_bar.image);
       }
   }
-
+else {
+    # Be super careful with opacity. All values are modded by 1,
+    # so if we go above 1 we will begin fading in again.
+    if (Plymouth.GetMode() == "boot")
+      {
+        opacity = progress * 1.1;
+        if (opacity > 1)
+          {
+            opacity = 1;
+          }
+        ruru.sprite.SetOpacity (opacity);
+      }
+    else
+      {
+        opacity = 1 - progress*6;
+        if (opacity < 0)
+          {
+            opacity = 0;
+          }
+        ruru.sprite.SetOpacity (opacity);
+      }
+   }
  }
 
 Plymouth.SetBootProgressFunction(progress_callback);
