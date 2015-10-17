@@ -34,19 +34,16 @@ terminal-box: "item_normal_*.png"
 		max_items_shown = 10
 }
 
-# Show a styled horizontal progress bar
-+ progress_bar {
-                id = "__timeout__"
-                left = 50%-342
-                width = 705
-                top = 50%+221
-                height = 12
-                show_text = true
-                font = "DejaVu Sans Bold 14"
-                text_color = "#d4e0ec"
-                text = "@TIMEOUT_NOTIFICATION_LONG@"
-                bar_style = "progress_bar_*.png"
-                highlight_style = "progress_bar_*.png"
+# show timeout
++ label {
+		top = 82%
+		left = 35%
+		width = 30%
+		align = "center"
+		id = "__timeout__"
+		text = "Start in %d second(s)"
+		color = "#000000"
+		font = "DejaVu Sans Bold 14"
 }
 
 # Show an informational message.
