@@ -39,7 +39,7 @@ if (Plymouth.GetMode() == "suspend" || Plymouth.GetMode() == "resume") {
   Window.SetBackgroundBottomColor(0, 1, 0);
 }
 else {
-  logo.original_image = ImageNew("logo_moondrake.png");
+  logo.original_image = ImageNew("moondrake-logo.png");
   background.original_image = ImageNew("background.png");
   Window.SetBackgroundTopColor(0.234, 0.43, 0.705);
   Window.SetBackgroundBottomColor(0.16, 0.25, 0.44);

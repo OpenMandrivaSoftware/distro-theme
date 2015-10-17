@@ -1,17 +1,26 @@
 NAME=distro-theme
 PACKAGE=distro-theme
-VERSION=1.4.29
-# set default resoltuion for background here
-DEFAULT_RES:=1920x1080
+VERSION=1.4.34
+# set default resolution for background here
+DEFAULT_RES:=1920x1440
 FALLBACK_RES:=1024x768
 
 THEMES=Moondrake OpenMandriva
 
-FILES=$(THEMES) Makefile common gimp extra-backgrounds
+SUBDIRS=$(THEMES)
+
+.PHONY: subdirs $(SUBDIRS)
+
+subdirs: $(SUBDIRS)
+
+$(SUBDIRS):
+	$(MAKE) -C $@
+
+FILES=$(THEMES) Makefile common gimp
 sharedir=/usr/share
 configdir=/etc
 
-# https://abf.rosalinux.ru/omv_software/distro-theme
+# https://abf.rosalinux.ru/software/distro-theme
 SVNSOFT=svn+ssh://svn.mandriva.com/svn/soft/theme/mandriva-theme/
 SVNNAME=svn+ssh://svn.mandriva.com/svn/packages/cooker/mandriva-theme/current/
 
@@ -21,11 +30,9 @@ install:
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/screensaver
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/mdk/backgrounds
 	mkdir -p $(DESTDIR)$(prefix)/$(sharedir)/icons
-	install -m 644 extra-backgrounds/*.*g $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
+	install -m644 */extra-backgrounds/*.*g $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */background/*.*g $(DESTDIR)$(prefix)$(sharedir)/mdk/backgrounds
 	install -m644 */icons/*.*g $(DESTDIR)$(prefix)$(sharedir)/icons
-	install -d $(DESTDIR)/boot/grub2/fonts/
-	install -m644 common/fonts/*.pf2 $(DESTDIR)/boot/grub2/fonts/
 	@for t in $(THEMES); do \
           set -x; set -e; \
 	  [ -d $$t/screensaver ] && install -m644 $$t/screensaver/*.??g $(DESTDIR)$(prefix)/$(sharedir)/mdk/screensaver; \
@@ -37,14 +44,11 @@ install:
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t; \
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t/icons; \
 	  if [ -f $$t/gfxboot/welcome.png ]; then \
-	    convert $$t/gfxboot/welcome.png $(DESTDIR)/boot/grub2/themes/$$t/welcome.jpg; \
 	    convert $$t/gfxboot/welcome.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/welcome.jpg; \
 	    rm $$t/gfxboot/welcome.png; \
 	  fi; \
 	  if [ -f $$t/gfxboot/back.png ]; then \
-	    convert $$t/gfxboot/back.png $(DESTDIR)/boot/grub2/themes/$$t/back.jpg; \
 	    convert $$t/gfxboot/back.png $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t/back.jpg; \
-	    rm $$t/gfxboot/back.png; \
 	  fi; \
 	  install -m644 $$t/gfxboot/*.* $(DESTDIR)/boot/grub2/themes/$$t/; \
 	  install -m644 $$t/gfxboot/theme.txt $(DESTDIR)/boot/grub2/themes/$$t/; \
@@ -94,11 +98,12 @@ ChangeLog:
 dist:
 	git archive --format=tar --prefix=$(NAME)-$(VERSION)/ HEAD | xz -2vec -T0 > $(NAME)-$(VERSION).tar.xz;
 	$(info $(NAME)-$(VERSION).tar.xz is ready)
+	git tag $(NAME)-$(VERSION)
 
 dist-old: cleandist export tar
 
 cleandist:
-	rm -rf $(PACKAGE)-$(VERSION) $(PACKAGE)-$(VERSION).tar.bz2
+	rm -rf $(PACKAGE)-$(VERSION).tar.xz
 
 export:
 	svn export -q -rBASE . $(NAME)-$(VERSION)
