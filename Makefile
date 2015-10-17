@@ -5,7 +5,7 @@ VERSION=1.4.35
 DEFAULT_RES:=1920x1440
 FALLBACK_RES:=1024x768
 
-THEMES=Moondrake OpenMandriva
+THEMES:=Moondrake OpenMandriva
 
 SUBDIRS=$(THEMES)
 
