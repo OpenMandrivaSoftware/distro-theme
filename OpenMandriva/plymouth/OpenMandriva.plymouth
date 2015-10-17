@@ -1,6 +1,6 @@
 [Plymouth Theme]
-Name=OpenMandriva 2014.1 theme
-Description=OpenMandriva 2014.1 Plymouth theme
+Name=OpenMandriva Elegant
+Description=A theme that features a black background with a logo.
 ModuleName=script
 
 [script]
