@@ -1,6 +1,46 @@
+2016-07-25 20:48:19 +0200 tpg 
+
+	* new artwork (HEAD -> master, origin/master, origin/HEAD)
+
+2016-06-04 18:29:12 +0200 Bernhard Rosenkränzer 
+
+	* New OpenMandriva logo from rugyada
+
+2016-04-01 02:14:48 +0200 tpg (Tomasz Pawe³ Gajc) 
+
+	* new wallpapers
+
+2016-01-18 19:16:03 +0100 tpg (Tomasz Pawe³ Gajc) 
+
+	* add new backgrounds for SDDM and KSplash
+
+2016-01-18 19:08:05 +0100 tpg (Tomasz Pawe³ Gajc) 
+
+	* add new screensaver images
+
+2016-01-10 03:35:40 +0100 tpg (Tomasz Pawe³ Gajc) 
+
+	* new icon for Rugyada
+
+2016-01-07 03:00:19 +0100 tpg (Tomasz Pawe³ Gajc) 
+
+	* import new wallpapers and backgrounds from Rugyada
+
+2016-01-07 02:00:45 +0100 tpg (Tomasz Pawe³ Gajc) 
+
+	* add new plymouth progress image
+
+2015-10-17 13:46:30 +0200 tpg (Tomasz Pawe³ Gajc) 
+
+	* allow to override THEMES
+
+2015-10-17 12:39:48 +0200 tpg (Tomasz Pawe³ Gajc) 
+
+	* generated changelog
+
 2015-10-17 11:36:00 +0200 tpg (Tomasz Pawe³ Gajc) 
 
-	* bump version (HEAD, origin/master, origin/HEAD, master)
+	* bump version
 
 2015-10-17 11:32:39 +0200 tpg (Tomasz Pawe³ Gajc) 
 
