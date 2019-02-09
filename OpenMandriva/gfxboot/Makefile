@@ -10,6 +10,8 @@ clean:
 
 install:
 	install -d $(DESTDIR)/boot/grub2/themes/OpenMandriva
+	install -d -m700 $(DESTDIR)/etc/grub.d
+	install -m755 ../grub2/05_theme $(DESTDIR)/etc/grub.d/
 	install -m644 *.* $(DESTDIR)/boot/grub2/themes/OpenMandriva/
 	install -m644 gnu_unifont_regular_16.pf2 -D $(DESTDIR)/boot/grub2/themes/OpenMandriva/gnu_unifont_regular_16.pf2
 
