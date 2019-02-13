@@ -51,11 +51,11 @@ terminal-box: "item_normal_*.png"
 		top = 100%-37
 		left = 50%-332
 		+ label {text = "E: " font = "GNU Unifont Regular 16" color = "#7ebeec" align = "left"}
-		+ label {text = "Edit entry     " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
+		+ label {text = "Edit entry   " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
 		+ label {text = "C: " font = "GNU Unifont Regular 16" color = "#7ebeec" align = "left"}
-		+ label {text = "Console     " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
+		+ label {text = "Console   " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
                 + label {text = "Enter: " font = "GNU Unifont Regular 16" color = "#7ebeec" align = "left"}
-                + label {text = "Boot entry     " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
+                + label {text = "Boot entry   " font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
                 + label {text = "ESC: " font = "GNU Unifont Regular 16" color = "#7ebeec" align = "left"}
                 + label {text = "Back" font = "GNU Unifont Regular 16" color = "#d4e0ec" align = "left"}
 }
