@@ -1,6 +1,6 @@
 [Plymouth Theme]
-Name=Bluette theme
-Description=Bluette Plymouth theme for OpenMandriva
+Name=OpenMandriva
+Description=OpenMandriva Plymouth theme
 ModuleName=script
 
 [script]
