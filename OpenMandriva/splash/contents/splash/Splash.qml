@@ -41,23 +41,23 @@ Image {
             anchors.centerIn: parent
         }
         Rectangle {
-            radius: 3
+            radius: 0
             color: "#afb3bd"
             anchors {
                 bottom: parent.bottom
                 bottomMargin: 80
                 horizontalCenter: parent.horizontalCenter
             }
-            height: 8
-            width: height*32
+            height: 2
+            width: height*150
             Rectangle {
-                radius: 3
+                radius: 1
                 anchors {
                     left: parent.left
                     top: parent.top
                     bottom: parent.bottom
                 }
-                width: (parent.width / 6) * (stage - 1)
+                width: (parent.width / 6) * (stage - 0.01)
                 color: "#eff0f1"
                 Behavior on width { 
                     PropertyAnimation {
