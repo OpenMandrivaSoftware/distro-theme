@@ -1,6 +1,186 @@
+2020-03-14 17:40:05 +0100 tpgxyz 
+
+	* add system-logo-white.png for plymouth (HEAD -> master, origin/master, origin/HEAD)
+
+2019-11-24 10:54:45 +0100 rugyada 
+
+	* Add files via upload (tag: 1.4.46)
+
+2019-11-24 10:53:20 +0100 rugyada 
+
+	* Delete splash.png
+
+2019-11-24 10:34:46 +0100 rugyada 
+
+	* Update Splash.qml
+
+2019-11-24 10:05:54 +0100 rugyada 
+
+	* Fix name
+
+2019-06-02 22:56:04 +0200 rugyada 
+
+	* Add files via upload
+
+2019-06-02 22:55:37 +0200 rugyada 
+
+	* Delete Sky_View.jpg
+
+2019-05-24 17:50:48 +0200 rugyada 
+
+	* Add credits file
+
+2019-05-24 17:46:01 +0200 rugyada 
+
+	* Add files via upload
+
+2019-05-24 17:22:04 +0200 rugyada 
+
+	* Not needed anymore
+
+2019-05-23 19:58:32 +0200 rugyada 
+
+	* New wallpapers-extra
+
+2019-05-14 19:43:23 +0200 Bernhard Rosenkraenzer 
+
+	* - Add OMV 4 splash screen - Remove background jpg, the png is good enough - Remove moondrake files, it doesn't seem to be maintained anymore (tag: v1.4.45)
+
+2019-05-14 15:36:41 +0200 rugyada 
+
+	* New theme
+
+2019-05-14 15:36:13 +0200 rugyada 
+
+	* Delete background.png
+
+2019-05-14 15:34:02 +0200 rugyada 
+
+	* New theme
+
+2019-05-14 15:32:44 +0200 rugyada 
+
+	* Delete motivo-54.png
+
+2019-05-14 15:32:32 +0200 rugyada 
+
+	* Delete motivo-43.png
+
+2019-05-14 15:32:16 +0200 rugyada 
+
+	* Delete motivo-169.png
+
+2019-05-14 15:32:02 +0200 rugyada 
+
+	* Delete motivo-1610.png
+
+2019-05-14 15:31:30 +0200 rugyada 
+
+	* Delete bg-background-54.png
+
+2019-05-14 15:31:10 +0200 rugyada 
+
+	* Delete bg-background-43.png
+
+2019-05-14 15:30:53 +0200 rugyada 
+
+	* Delete bg-background-169.png
+
+2019-05-14 15:30:41 +0200 rugyada 
+
+	* Delete bg-background-1610.png
+
+2019-05-14 15:28:43 +0200 rugyada 
+
+	* New theme
+
+2019-05-14 15:27:09 +0200 rugyada 
+
+	* Delete OpenMandriva-splash.png
+
+2019-05-14 15:26:28 +0200 rugyada 
+
+	* Delete OpenMandriva-5x4.png
+
+2019-05-14 15:26:16 +0200 rugyada 
+
+	* Delete OpenMandriva-4x3.png
+
+2019-05-14 15:26:03 +0200 rugyada 
+
+	* Delete OpenMandriva-16x9.png
+
+2019-05-14 15:25:41 +0200 rugyada 
+
+	* Delete OpenMandriva-16x9.jpg
+
+2019-05-14 15:25:04 +0200 rugyada 
+
+	* Delete OpenMandriva-16x10.png
+
+2019-02-13 22:58:23 +0100 Gabriel Craciunescu 
+
+	* fix theme for small displays ( ok on really small ones it may still look ugly ) (tag: v1.4.44)
+
+2019-02-10 02:42:37 +0100 Gabriel Craciunescu 
+
+	* revert back the om.svg icon (tag: v1.4.43)
+
+2019-02-10 00:16:57 +0100 Gabriel Craciunescu 
+
+	* lets add to top Makefile too (tag: v1.4.42)
+
+2019-02-09 23:36:05 +0100 Gabriel Craciunescu 
+
+	* install 05_theme
+
+2019-02-09 23:23:56 +0100 Gabriel Craciunescu 
+
+	* Update icons/gfxboot/NOTE
+
+2019-02-09 23:22:40 +0100 Gabriel Craciunescu 
+
+	* added 05_theme for grub.d
+
+2019-02-09 22:59:09 +0100 Gabriel Craciunescu 
+
+	* added frugalware.png for the grub icons
+
+2019-02-09 22:53:18 +0100 Gabriel Craciunescu 
+
+	* openmandriva.{svg,png} update from ruru
+
+2019-02-09 22:41:51 +0100 Gabriel Craciunescu 
+
+	* update grub theme
+
+2018-11-06 18:57:16 +0100 tpgxyz 
+
+	* add right plymouth images (tag: v1.4.41)
+
+2018-10-27 22:44:30 +0200 tpgxyz 
+
+	* add support for NO_GRUB architecture
+
+2018-10-27 22:29:16 +0200 tpgxyz 
+
+	* new images for Lx 4.0
+
+2016-07-25 22:28:47 +0200 tpg 
+
+	* bump version
+
+2016-07-25 22:18:21 +0200 tpg 
+
+	* remove wrong file
+
+2016-07-25 20:50:31 +0200 tpg 
+
+	* generated changelog (tag: v1.4.39)
+
 2016-07-25 20:48:19 +0200 tpg 
 
-	* new artwork (HEAD -> master, origin/master, origin/HEAD)
+	* new artwork
 
 2016-06-04 18:29:12 +0200 Bernhard Rosenkränzer 
 
