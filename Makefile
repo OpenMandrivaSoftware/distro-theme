@@ -42,6 +42,8 @@ install:
 	  install -m644 $$t/plymouth/*.script $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -m644 $$t/plymouth/*.plymouth $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
 	  install -m644 $$t/plymouth/*.png $(DESTDIR)$(prefix)$(sharedir)/plymouth/themes/$$t/; \
+	  install -d $(DESTDIR)$(prefix)/$(sharedir)/pixmaps; \
+	  install -m644 $$t/pixmaps/system-logo-white.png $(DESTDIR)$(prefix)$(sharedir)/pixmaps/system-logo-white.png; \
 	  install -d $(DESTDIR)$(prefix)$(sharedir)/gfxboot/themes/$$t;  \
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t; \
 	  install -d $(DESTDIR)/boot/grub2/themes/$$t/icons; \
