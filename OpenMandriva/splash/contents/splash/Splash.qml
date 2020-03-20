@@ -22,7 +22,8 @@ import QtQuick 2.1
 
 Image {
     id: root
-    source: "images/background.png"
+    source: "/usr/share/mdk/backgrounds/OpenMandriva-splash.png"
+    fillMode: Image.PreserveAspectCrop
 
     property int stage
 
